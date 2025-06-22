@@ -51,7 +51,7 @@ with col1:
 
 with col2:
     st.markdown("### Problem 2")
-    st.code(f"  {x_str}\n+{y_str}\n" + "-" * (len(x_str) + 2), language='text')
+    st.code(f"{' '}{x_str}\n+{y_str}\n" + "-" * (len(x_str) + 2), language='text')
     ans2 = st.number_input("Your Answer", key="ans2", step=1,value=None)
     if st.button("✅ Check Answer", key="check2"):
         if ans2 == x + y:
