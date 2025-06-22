@@ -1,0 +1,6 @@
+streamlit
+pandas
+requests
+gtts
+deep_translator
+
