@@ -7,7 +7,7 @@ import streamlit as st
 from deep_translator import GoogleTranslator
 
 # Load 500-word CSV
-words = pd.read_csv("/home/vihaan/coding/pihu_project/500_words_flashcards.csv", header=None)
+words = pd.read_csv("../500_words_flashcards.csv", header=None)
 
 # Safely select a random word
 row_max, col_max = words.shape
