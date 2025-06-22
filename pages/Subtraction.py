@@ -60,7 +60,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("### Problem 1")
-    st.code(f"{"  "*2}{a_str}\n-{b_str}\n" + "-" * (len(a_str) + 2), language='text')
+    st.code(f"{' '}{a_str}\n-{b_str}\n" + "-" * (len(a_str) + 2), language='text')
     ans1 = st.number_input("Your Answer", key="ans1", step=1,value=None)
     if st.button("✅ Check Answer", key="check1"):
         if ans1 == a - b:
