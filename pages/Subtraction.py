@@ -67,7 +67,7 @@ with col1:
             st.success("🎉 Correct!")
             st.balloons()
         else:
-            st.error(f"❌ Try again. The correct answer is {a + b}")
+            st.error(f"❌ Try again. The correct answer is {a - b}")
 
 with col2:
     st.markdown("### Problem 2")
@@ -78,7 +78,7 @@ with col2:
             st.success("🎉 Correct!")
             st.balloons()
         else:
-            st.error(f"❌ Try again. The correct answer is {x + y}")
+            st.error(f"❌ Try again. The correct answer is {x - y}")
 
 # --- Reset button to generate new problems ---
 if st.button("🔄 New Problems"):
