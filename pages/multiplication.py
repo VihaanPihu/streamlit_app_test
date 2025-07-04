@@ -1,18 +1,16 @@
 import streamlit as st
 import random
 
-st.set_page_config(page_title="Multiplication Practice")
+st.set_page_config(page_title="Multiplication Practice", page_icon="➕")
 
-st.title("🧒 Multiplication  Practice for Nitya")
+st.title("🧒 multiplication Practice for Nitya")
 
 # --- Difficulty selector ---
-difficulty = st.radio("Choose number type:", ["1-digit","2-digit", "3-digit","4-digit","5-digit"])
+difficulty = st.radio("Choose number type:", ["2-digit", "3-digit","4-digit","5-digit"])
 
 # --- Helper to generate random numbers based on difficulty ---
 def generate_numbers():
-    if difficulty == "1-digit":
-        return random.randint(1, 9), random.randint(1, 9)
-    elif difficulty == "2-digit":
+    if difficulty == "2-digit":
         return random.randint(10, 99), random.randint(10, 99)
     elif difficulty == "3-digit":
         return random.randint(100, 999), random.randint(100, 999)
@@ -42,7 +40,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("### Problem 1")
-    st.code(f"{"  "*2}{a_str}\nx{b_str}\n" + "-" * (len(a_str) + 2), language='text')
+    st.code(f"{' '}{a_str}\nx{b_str}\n" + "-" * (len(a_str) + 2), language='text')
     ans1 = st.number_input("Your Answer", key="ans1", step=1,value=None)
     if st.button("✅ Check Answer", key="check1"):
         if ans1 == a * b:
@@ -53,7 +51,7 @@ with col1:
 
 with col2:
     st.markdown("### Problem 2")
-    st.code(f"  {x_str}\nx{y_str}\n" + "-" * (len(x_str) + 2), language='text')
+    st.code(f"{' '}{x_str}\nx{y_str}\n" + "-" * (len(x_str) + 2), language='text')
     ans2 = st.number_input("Your Answer", key="ans2", step=1,value=None)
     if st.button("✅ Check Answer", key="check2"):
         if ans2 == x * y:
