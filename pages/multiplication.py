@@ -6,7 +6,7 @@ st.set_page_config(page_title="Multiplication Practice", page_icon="➕")
 st.title("🧒 multiplication Practice for Nitya")
 
 # --- Difficulty selector ---
-difficulty = st.radio("Choose number type:", ["2-digit", "3-digit","4-digit","5-digit"])
+difficulty = st.radio("Choose number type:", ["1-digit","2-digit", "3-digit","4-digit","5-digit"])
 
 # --- Helper to generate random numbers based on difficulty ---
 def generate_numbers():
