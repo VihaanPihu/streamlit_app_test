@@ -11,7 +11,7 @@ difficulty = st.radio("Choose number type:", ["1-digit","2-digit", "3-digit","4-
 # --- Helper to generate random numbers based on difficulty ---
 def generate_numbers():
     if difficulty == "1-digit":
-        return random.randint(1, 9), random.randint(1, 9)
+        return random.randint(1, 99), random.randint(1, 9)
     elif difficulty == "2-digit":
         return random.randint(10, 99), random.randint(10, 99)
     elif difficulty == "3-digit":
